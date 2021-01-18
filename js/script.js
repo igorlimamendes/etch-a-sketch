@@ -1,6 +1,8 @@
+// Variables
 const button = document.getElementById("button");
 const container = document.getElementById("container");
 
+// Make rows function
 function makeRows(rows, cols) {
     container.style.setProperty("--grid-rows", rows);
     container.style.setProperty("--grid-cols", cols);
@@ -10,13 +12,13 @@ function makeRows(rows, cols) {
 
         container.appendChild(cell).className = "grid-item";
 
-        cell.addEventListener("mouseover", function(event) {
-            event.target.classList.add("grid-item--color");
+        cell.addEventListener("mouseover", function(event) { // Detect when user hover div (cell)
+            event.target.classList.add("grid-item--color"); // Add a class in order to change background color
         });
     }
 }
 
-makeRows(10, 10);
+makeRows(10, 10); // Default value when user reload webpage or access for the first time
 
 button.addEventListener("click", () => {
     let size = prompt("Select a value between 1 and 100");
