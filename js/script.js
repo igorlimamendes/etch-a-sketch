@@ -34,5 +34,7 @@ button.addEventListener("click", () => {
         }
 
         makeRows(size, size); // Call function to create a game with new values
-    } else alert("Only values between 1 and 100 are allowed"); // User have enter a wrong value
+    } else {
+        while (size < 1 || size > 100) size = prompt("Select a value between 1 and 100");
+    }
 });
