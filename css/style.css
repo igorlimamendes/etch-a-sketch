@@ -9,6 +9,7 @@
     --white: #fff;
     --black: #000;
     --backBtn: #0d3634;
+    --hoverBtn: #7b34ff;
 }
 
 body {
@@ -32,7 +33,15 @@ body {
     border: .15em solid transparent;
     padding: .5em 1em;
     border-radius: .5em;
+    outline: none;
+    transition: all .1s linear;
 }
+    #button:hover,
+    #button:focus {
+        cursor: pointer;
+        border-color: var(--hoverBtn);
+        box-shadow: 0 0 .5em var(--hoverBtn);
+    }
 
 /* Container */
 #container {
