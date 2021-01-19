@@ -22,19 +22,17 @@ makeRows(10, 10); // Default value when user reload or access page for the first
 
 // Button function
 button.addEventListener("click", () => {
-    let size = prompt("Select a value between 1 and 100");
+    let size = 0;
 
-    if (size >= 1 && size <= 100) {
-        let totLength = container.children.length; // Get total length of container children that have been created in makeRows function
+    while (size < 1 || size > 100) size = prompt("Select a value between 1 and 100");
+
+    let totLength = container.children.length; // Get total length of container children that have been created in makeRows function
+    
+    for (let i = 0; i < totLength; i++) {
+        let gridItem = document.querySelector(".grid-item");
         
-        for (let i = 0; i < totLength; i++) {
-            let gridItem = document.querySelector(".grid-item");
-            
-            container.removeChild(gridItem);
-        }
-
-        makeRows(size, size); // Call function to create a game with new values
-    } else {
-        while (size < 1 || size > 100) size = prompt("Select a value between 1 and 100");
+        container.removeChild(gridItem);
     }
+
+    makeRows(size, size); // Call function to create a game with new values
 });
