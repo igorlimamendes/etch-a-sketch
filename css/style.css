@@ -54,6 +54,3 @@ body {
     height: 500px;
     margin: auto;
 }
-    .grid-item--color {
-        background: var(--black);
-    }
