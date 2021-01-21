@@ -10,10 +10,10 @@ function makeRows(rows, cols) {
     for (let i = 0; i < (rows * cols); i++) {
         let cell = document.createElement("div");
 
-        container.appendChild(cell).className = "grid-item";
+        container.appendChild(cell).className = "cell";
 
         cell.addEventListener("mouseover", function(event) {
-            event.target.classList.add("grid-item--color"); // Add a class in order to change background color
+            cell.setAttribute("style", "background: var(--black);"); // Change background color when user's hovering cell div
         });
     }
 }
@@ -29,9 +29,9 @@ button.addEventListener("click", () => {
     let totLength = container.children.length; // Get total length of container children that have been created in makeRows function
     
     for (let i = 0; i < totLength; i++) {
-        let gridItem = document.querySelector(".grid-item");
+        let cellClass = document.querySelector(".cell");
         
-        container.removeChild(gridItem);
+        container.removeChild(cellClass);
     }
 
     makeRows(size, size); // Call function to create a game with new values
