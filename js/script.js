@@ -45,6 +45,8 @@ btnGridSize.addEventListener("click", () => {
     }
 
     makeRows(size, size); // Call function to create a grid with new size
+
+    container.style.boxShadow = `0 .2em 1em var(--black)`; // Change box shadow to default (black)
 });
 
 // Clear Button
@@ -54,6 +56,8 @@ btnClear.addEventListener("click", () => {
     for (let i = 0; i < totLength; i++) {
         container.children[i].removeAttribute("style"); // Remove style attribute for each cell div
     }
+
+    container.style.boxShadow = `0 .2em 1em var(--black)`; // Change box shadow to default (black)
 });
 
 // Colored Button
