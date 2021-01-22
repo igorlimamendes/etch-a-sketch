@@ -50,6 +50,7 @@ body {
             cursor: pointer;
             border-color: var(--hoverBtn);
             box-shadow: 0 0 .5em var(--hoverBtn);
+            outline: none;
         }
 
 /* Container */
