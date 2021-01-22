@@ -23,8 +23,8 @@ function makeRows(rows, cols) {
 
 makeRows(10, 10); // Default value when user reload or access page for the first time
 
-// Button function
-btnClear.addEventListener("click", () => {
+// Grid Size Button
+btnGridSize.addEventListener("click", () => {
     let size = 0;
 
     while (size < 1 || size > 100) size = prompt("Select a value between 1 and 100");
