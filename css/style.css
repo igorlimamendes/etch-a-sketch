@@ -7,13 +7,14 @@
     --grid-cols: 1;
     --grid-rows: 1;
     --white: #fff;
+    --backBody: #e4f5f5;
     --black: #000;
     --backBtn: #0d3634;
     --hoverBtn: #7b34ff;
 }
 
 body {
-    background: var(--white);
+    background: var(--backBody);
     color: var(--black);
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
