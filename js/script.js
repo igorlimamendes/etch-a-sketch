@@ -4,6 +4,7 @@ const btnClear = document.querySelector(".clear");
 const btnColored = document.querySelector(".colored");
 const btnBlack = document.querySelector(".black");
 const container = document.getElementById("container");
+let cellColor = 0; // 0 is default (black) and 1 is colored
 
 // Make rows function
 function makeRows(rows, cols) {
@@ -15,8 +16,12 @@ function makeRows(rows, cols) {
 
         container.appendChild(cell).className = "cell";
 
-        cell.addEventListener("mouseover", function(event) {
-            cell.setAttribute("style", "background: var(--black);"); // Change background color when user's hovering cell div
+        cell.addEventListener("mouseover", function(event) { // Change background color when user hover cell div
+            if (cellColor === 0) {
+                cell.setAttribute("style", "background: var(--black);");
+            } else {
+                cell.setAttribute("style", `background: rgb(${colored()}, ${colored()}, ${colored()});`); // Call function to return random values to use in rgb
+            }
         });
     }
 }
@@ -48,3 +53,10 @@ btnClear.addEventListener("click", () => {
         container.children[i].removeAttribute("style"); // Remove style attribute for each div (cell) that was hover
     }
 });
+
+// Colored Button
+const colored = () => {
+    return Math.floor(Math.random() * 256); // Return a random value between 1 and 255
+}
+
+btnColored.addEventListener("click", () => {cellColor = 1;});
