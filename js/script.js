@@ -1,5 +1,8 @@
 // Variables
+const btnGridSize = document.querySelector(".gridSize");
 const btnClear = document.querySelector(".clear");
+const btnColored = document.querySelector(".colored");
+const btnBlack = document.querySelector(".black");
 const container = document.getElementById("container");
 
 // Make rows function
