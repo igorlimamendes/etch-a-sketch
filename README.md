@@ -1,3 +1,3 @@
-**Assignment:** Build a Etch-a-Sketch\
+**Assignment:** Build a Etch A Sketch\
 **Source:** [The Odin Project](https://theodinproject.com/courses/foundations/lessons/etch-a-sketch-project)\
-**Live Demo:** [Etch-a-Sketch](https://igorlimamendes.github.io/etch-a-sketch/)
+**Live Demo:** [Etch A Sketch](https://igorlimamendes.github.io/etch-a-sketch/)
