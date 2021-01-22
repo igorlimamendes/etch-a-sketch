@@ -60,3 +60,6 @@ const colored = () => {
 }
 
 btnColored.addEventListener("click", () => {cellColor = 1;});
+
+// Black Button
+btnBlack.addEventListener("click", () => {cellColor = 0;});
