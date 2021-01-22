@@ -44,7 +44,7 @@ btnGridSize.addEventListener("click", () => {
         container.removeChild(cellClass);
     }
 
-    makeRows(size, size); // Call function to create a game with new values
+    makeRows(size, size); // Call function to create a grid with new size
 });
 
 // Clear Button
