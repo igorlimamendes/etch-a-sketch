@@ -50,7 +50,7 @@ btnClear.addEventListener("click", () => {
     let totLength = container.children.length; // Get total length of container children that have been created in makeRows function
     
     for (let i = 0; i < totLength; i++) {
-        container.children[i].removeAttribute("style"); // Remove style attribute for each div (cell) that was hover
+        container.children[i].removeAttribute("style"); // Remove style attribute for each cell div
     }
 });
 
