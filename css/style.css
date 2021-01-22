@@ -20,28 +20,36 @@ body {
     padding: 3em;
 }
 
-/* Button */
-.button {
-    display: block;
-    margin: 0 auto 2em;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: .15em .15em .15em var(--black);
-    color: var(--white);
-    background: var(--backBtn);
-    border: .15em solid transparent;
-    padding: .5em 1em;
-    border-radius: .5em;
-    outline: none;
-    transition: all .1s linear;
+/* Buttons */
+.buttons {
+    width: 450px;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: .5em 0;
 }
-    .button:hover,
-    .button:focus {
-        cursor: pointer;
-        border-color: var(--hoverBtn);
-        box-shadow: 0 0 .5em var(--hoverBtn);
+    .button {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: .15em .15em .15em var(--black);
+        color: var(--white);
+        background: var(--backBtn);
+        border: .15em solid transparent;
+        margin: .5em 0;
+        padding: .5em 1em;
+        border-radius: .5em;
+        outline: none;
+        transition: all .1s linear;
     }
+        .button:hover,
+        .button:focus {
+            cursor: pointer;
+            border-color: var(--hoverBtn);
+            box-shadow: 0 0 .5em var(--hoverBtn);
+        }
 
 /* Container */
 #container {
