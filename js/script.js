@@ -22,6 +22,8 @@ function makeRows(rows, cols) {
             } else {
                 cell.setAttribute("style", `background: rgb(${colored()}, ${colored()}, ${colored()});`); // Call function to return random values to use in rgb
             }
+
+            container.style.boxShadow = `0 .2em 1em ${cell.style.backgroundColor}`; // Change box shadow by the same random color generate in cell div
         });
     }
 }
