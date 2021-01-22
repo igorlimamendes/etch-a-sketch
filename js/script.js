@@ -39,3 +39,12 @@ btnGridSize.addEventListener("click", () => {
 
     makeRows(size, size); // Call function to create a game with new values
 });
+
+// Clear Button
+btnClear.addEventListener("click", () => {
+    let totLength = container.children.length; // Get total length of container children that have been created in makeRows function
+    
+    for (let i = 0; i < totLength; i++) {
+        container.children[i].removeAttribute("style"); // Remove style attribute for each div (cell) that was hover
+    }
+});
