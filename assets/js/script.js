@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Variables
     const btnGridSize = document.querySelector(".gridSize");
     const btnClear = document.querySelector(".clear");
-    const btnColored = document.querySelector(".colored");
+    const btnColourful = document.querySelector(".colourful");
     const btnBlack = document.querySelector(".black");
     const container = document.getElementById("container");
-    let cellColor = 0; // 0 is default (black) and 1 is colored
+    let cellColor = 0; // 0 is default (black) and 1 is colourful
 
     // Make rows function
     function makeRows(rows, cols) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (cellColor === 0) {
                     cell.setAttribute("style", "background: var(--black);");
                 } else {
-                    cell.setAttribute("style", `background: rgb(${colored()}, ${colored()}, ${colored()});`); // Call function to return random values to use in rgb
+                    cell.setAttribute("style", `background: rgb(${colourful()}, ${colourful()}, ${colourful()});`); // Call function to return random values to use in rgb
                 }
 
                 container.style.boxShadow = `0 .2em 1em ${cell.style.backgroundColor}`; // Change box shadow by the same random color generate in cell div
@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
         container.style.boxShadow = `0 .2em 1em var(--black)`; // Change box shadow to default (black)
     });
 
-    // Colored Button
-    const colored = () => {
+    // Colourful Button
+    const colourful = () => {
         return Math.floor(Math.random() * 256); // Return a random value between 1 and 255
     }
 
-    btnColored.addEventListener("click", () => {cellColor = 1;});
+    btnColourful.addEventListener("click", () => {cellColor = 1;});
 
     // Black Button
     btnBlack.addEventListener("click", () => {cellColor = 0;});
