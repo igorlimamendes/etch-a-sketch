@@ -1,6 +1,6 @@
 # Etch A Sketch
 
-Mix of a Sketchpad and an Etch A Sketch
+Mix of a Sketchpad and an Etch A Sketch.
 
 ![Screenshot](assets/images/etch-a-sketch.png)
 
